@@ -1,0 +1,17 @@
+{
+  "animationDistanceThreshold": 5,
+  "baseUrl": "http://localhost:4200",
+  "chromeWebSecurity": false,
+  "defaultCommandTimeout": 4000,
+  "env": {
+    "host": "http://localhost:4200",
+    "api_server": "URL",
+    "root": ""
+  },
+  "video": false,
+  "trashAssetsBeforeRuns": false,
+  "screenshotsFolder": "cypress/snapshots",
+  "viewportWidth": 375,
+  "viewportHeight": 667,
+  "projectId": "duvo39"
+}

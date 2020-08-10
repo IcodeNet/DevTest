@@ -1,7 +1,8 @@
 <h2>New job form</h2>
 <form #jobForm="ngForm" (ngSubmit)="createJob(jobForm)">
   <label for="engineer">Engineer</label>
-  <select name="engineer" required #engineer="ngModel" ngModel placeholder="Please select" [(ngModel)]="newJob.engineer">
+  <select name="engineer" required #engineer="ngModel" ngModel placeholder="Please select"
+    [(ngModel)]="newJob.engineer">
     <option [ngValue]="undefined" selected>Please select</option>
     <option *ngFor="let engineer of engineers">{{engineer}}</option>
   </select>
@@ -13,7 +14,7 @@
 </form>
 
 <h2>Jobs list</h2>
-<table spacing="0">
+<table spacing="0" data-testid="JobList">
   <thead>
     <tr>
       <th>Engineer</th>
