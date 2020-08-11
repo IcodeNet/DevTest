@@ -1,10 +1,13 @@
-﻿using System;
+﻿using DeveloperTest.Database.Enums;
+
 namespace DeveloperTest.Database.Models
 {
-    public class CustomerModel
+    public class Customer
     {
-        public CustomerModel()
-        {
-        }
+        public int CustomerId { get; set; }
+
+        public string Name { get; set; }
+
+        public CustomerType Type { get; set; }
     }
 }
