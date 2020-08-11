@@ -6,8 +6,8 @@ import { JobModel } from '../models/job.model';
 import { JobCreateModel } from '../models/job.createmodel';
 import { Observable } from 'rxjs';
 import { CustomerModel } from '../models/customer.model';
-import { CustomerService } from '../services/customer.service';
 import { shareReplay } from 'rxjs/operators';
+import { CustomerService } from '../services/customer.service';
 
 @Component({
   selector: 'app-job',
