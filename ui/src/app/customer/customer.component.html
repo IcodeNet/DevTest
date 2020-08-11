@@ -1,0 +1,33 @@
+<h2>New customer form</h2>
+<form [formGroup]="createForm" (ngSubmit)="createCustomer()">
+  <label for="name">Name</label>
+  <input name="name" formControlName="name" />
+  <small *ngIf="createForm.controls['name'].errors">Please enter a name with at least 5 characters</small>
+  <br />
+  <label for="type">Type</label>
+  <select formControlName="type">
+    <option>Large</option>
+    <option>Small</option>
+  </select>
+  <button type="submit" [disabled]="createForm.invalid">Add Customer</button>
+</form>
+
+<h2>Customer list</h2>
+<table spacing="0">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of customers$ | async">
+      <td>{{ customer.name }}</td>
+      <td>{{ customer.type }}</td>
+      <td>
+        <a [routerLink]="['/customer', customer.customerId]">Open</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
